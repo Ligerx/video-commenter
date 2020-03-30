@@ -8,6 +8,10 @@ defmodule Rumbl.Multimedia.Category do
     timestamps()
   end
 
+  def create_category!(name) do
+    Repo.insert!(%Category{name: name}, on_conflict: :nothing)
+  end
+
   @doc false
   def changeset(category, attrs) do
     category
