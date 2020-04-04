@@ -17,6 +17,11 @@ import "phoenix_html"
 // import socket from "./socket"
 
 import Player from "./player"
+import socket from "./socket"
+import Video from "./video"
+
+Video.init(socket, document.getElementById("video"))
+
 let video = document.getElementById("video")
 
 if (video) {
