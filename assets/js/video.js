@@ -26,12 +26,14 @@ let Video = {
 
     let presence = new Presence(vidChannel);
     presence.onSync(() => {
-      console.warn("inside presence.onSync");
-      userList.innerHtml = presence
+      // console.warn("inside presence.onSync");
+      // presence.list((a) => console.log(a));
+      userList.innerHTML = presence
         .list((id, { metas: [first, ...rest] }) => {
-          console.warn("presence.list", id, metas);
-          let count = rest.length + 1;
-          return `<li>${id}: (${count})</li>`;
+          // console.warn("presence.list", id, metas);
+          // let count = rest.length + 1;
+          return `<li>${id}</li>`;
+          // return `<li>${id}: (${count})</li>`;
         })
         .join("");
     });
