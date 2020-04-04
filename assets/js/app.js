@@ -22,11 +22,11 @@ import Video from "./video"
 
 Video.init(socket, document.getElementById("video"))
 
-let video = document.getElementById("video")
+// let video = document.getElementById("video")
 
-if (video) {
-    console.log("inside the if statement", video, video.id, video.getAttribute("data-player-id"))
-    Player.init(video.id, video.getAttribute("data-player-id"), () => {
-        console.log("player ready!")
-    })
-}
+// if (video) {
+//     console.log("inside the if statement", video, video.id, video.getAttribute("data-player-id"))
+//     Player.init(video.id, video.getAttribute("data-player-id"), () => {
+//         console.log("player ready!")
+//     })
+// }
